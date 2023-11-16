@@ -45,8 +45,8 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    /* transform: translateX(100%);
-    animation: moveleft 0.5s linear forwards; */
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
 }
 
 @keyframes moveleft {
