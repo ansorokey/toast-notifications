@@ -6,12 +6,22 @@ function showToast(msg) {
 
     const toast = document.createElement('div');
     toast.classList.add('toast');
+    switch(msg) {
+        case successMsg:
+            toast.classList.add('success')
+            break;
+        case errMsg:
+            toast.classList.add('error');
+            break;
+        case invalidMsg:
+            toast.classList.add('invalid');
+    }
     toast.innerHTML = msg;
 
     const toastBox = document.querySelector('#toast-box');
     toastBox.appendChild(toast);
 
-    setTimeout(() => {
-        toast.remove();
-    }, 6000);
+    // setTimeout(() => {
+    //     toast.remove();321` `
+    // }, 6000);
 }

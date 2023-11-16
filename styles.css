@@ -44,7 +44,33 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
+    position: relative;
+    /* transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards; */
 }
+
+@keyframes moveleft {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.toast::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    animation: deplete 5s linear forwards;
+}
+
+@keyframes deplete {
+    100% {
+        width: 0;
+    }
+}
+
 
 .toast i {
     margin: 0 20px;
@@ -55,10 +81,22 @@ body {
     color: green;
 }
 
+.toast.success::after {
+    background: green;
+}
+
 .toast i.fa-circle-xmark {
     color: red;
 }
 
+.toast.error::after {
+    background: red;
+}
+
 .toast i.fa-circle-exclamation {
     color: orange;
+}
+
+.toast.invalid::after {
+    background: orange;
 }
