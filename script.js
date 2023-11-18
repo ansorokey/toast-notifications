@@ -21,7 +21,7 @@ function showToast(msg) {
     const toastBox = document.querySelector('#toast-box');
     toastBox.appendChild(toast);
 
-    // setTimeout(() => {
-    //     toast.remove();321` `
-    // }, 6000);
+    setTimeout(() => {
+        toast.remove();321` `
+    }, 6000);
 }
